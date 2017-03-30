@@ -12,7 +12,7 @@
     angular.module('starterapp')
         .controller('StarterCtrl', StarterCtrl);
 
-    function StarterCtrl($scope, registerUser, fetchTeams) {
+    function StarterCtrl($scope, registerUser, GetTeamDetails) {
         var vm = $scope;
         vm.title = "Hello World Again!";
         vm.myName = "Akash";
@@ -24,14 +24,11 @@
         //     console.log('Hello Mr', vm.user);
         // };
 
-        
-        function getTeams() {
-            return fetchTeams.getTeams()
-                .then(function (data) {
-                    vm.teams = data;
-                });
-        }
 
+        function getTeams() {
+            vm.teams = GetTeamDetails.getTeamNames();
+            console.log(vm.teams);
+        }
 
         vm.register = function () {
             var userdetails = registerUser.setUser(vm.user);

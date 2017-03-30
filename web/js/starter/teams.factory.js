@@ -16,11 +16,11 @@
                 .catch(getTeamFailed);
 
             function getTeamSuccess(response) {
-                return response.teams;
+                return response.data;
             }
 
             function getTeamFailed(error) {
-                logger.error('XHR Failed for getTeams.' + error.data);
+                console.log('XHR Failed for getTeams.' + error.data);
             }
         }
     }
