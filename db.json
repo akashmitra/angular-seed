@@ -1,18 +1,16 @@
-[
-    {
-        "Name": "Alfreds Futterkiste",
-        "Country": "Germany"
-    },
-    {
-        "Name": "Berglunds snabbköp",
-        "Country": "Sweden"
-    },
-    {
-        "Name": "Centro comercial Moctezuma",
-        "Country": "Mexico"
-    },
-    {
-        "Name": "Ernst Handel",
-        "Country": "Austria"
-    }
-]
+{
+    "teams": [
+        {
+            "name": "Wright Express Corporation",
+            "id": "WEX"
+        },
+        {
+            "name": "Wyndham Destination Network",
+            "id": "WDN"
+        },
+        {
+            "name": "Wyndham Vacation Ownership",
+            "id": "WVO"
+        }
+    ]
+}

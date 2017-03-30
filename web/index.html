@@ -18,7 +18,7 @@
 
 
         <!-- Repeats and Service Calls -->
-        <ul>
+        <!--<ul>
             <li>Akash</li>
             <li>Ashish</li>
             <li>Amit</li>
@@ -26,10 +26,20 @@
 
         <ul>
             <li ng-repeat="people in peoples"> {{people}}</li>
-        </ul>
+        </ul>-->
 
+        
+        
+        <!-- http, service and factory -->
+        <input type="text" placeholder="Name" ng-model="user.name"/>
+        <br>
+        <input type="text" placeholder="Employee ID" ng-model="user.empid"/> 
+        <br>
+        <select ng-model="user.team" ng-options="people in peoples"></select>    
+        <br>
+        <button ng-click="register()">Register</button>
 
-
+    
         <!-- Directives   -->
         <!--<my-header></my-header>-->
         <!--<some-action name="Akash"></some-action>-->
@@ -41,5 +51,8 @@
         <script src="js/starter/app.module.js"></script>
         <script src="js/starter/starter.controller.js"></script>
         <script src="js/starter/header.directive.js"></script>
+        <script src="js/starter/registerUser.factory.js"></script>
+        <script src="js/starter/teams.factory.js"></script>
+
     </body>
 </html>
