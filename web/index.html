@@ -8,6 +8,9 @@
     </head>
     <body ng-controller="StarterCtrl">
         <h1>{{title}}</h1>
+        <!--<h1 ng-bind="title"></h1>
+        <input type="text" ng-model="title"/>
+        <button ng-click="sayHello()">Say Hello</button>-->
 
         <!-- Two Way Bindings -->
         <!--<input type="text" placeholder="Name" ng-model="user.name"/> {{user.name}}
@@ -18,28 +21,29 @@
 
 
         <!-- Repeats and Service Calls -->
-        <ul>
+        <!--<ul>
             <li>Akash</li>
             <li>Ashish</li>
             <li>Amit</li>
-        </ul>
+        </ul>-->
 
-        <ul>
+        <!--<ul>
             <li ng-repeat="people in peoples"> {{people}}</li>
-        </ul>
-
+        </ul>-->
 
 
         <!-- Directives   -->
         <!--<my-header></my-header>-->
         <!--<some-action name="Akash"></some-action>-->
         <!--<heavy-action name="{{myName}}"></heavy-action>-->
-
+        <my-form></my-form>
 
         <!-- Javasript-->
         <script src="../node_modules/angular/angular.min.js"></script>
         <script src="js/starter/app.module.js"></script>
         <script src="js/starter/starter.controller.js"></script>
         <script src="js/starter/header.directive.js"></script>
+        <script src="js/starter/starter.factory.js"></script>
+        <script src="js/starter/starter.service.js"></script>
     </body>
 </html>

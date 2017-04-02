@@ -4,7 +4,8 @@
     angular.module('starterapp')
         .directive('myHeader', myHeader)
         .directive('someAction', someAction)
-        .directive('heavyAction', heavyAction);
+        .directive('heavyAction', heavyAction)
+        .directive('myForm', myForm);
 
     function myHeader() {
         return {
@@ -42,6 +43,24 @@
         };
     }
 
+    function myForm() {
+        return {
+            restrict: 'E',
+            templateUrl: 'pages/forms.html',
+            controller:
+            function ($scope, students, GetPeople) {
+                var vm = $scope;
+                vm.student = students.createStudents();
+                console.log('New Student :: ', vm.student);
+                vm.peoples = GetPeople.getSomePeople();
+
+                vm.submitStudent = function () {
+                    console.log('The student is :: ', vm.student);
+                };
+
+            }
+        };
+    }
 
 
 }());
