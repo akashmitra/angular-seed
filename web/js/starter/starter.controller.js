@@ -26,18 +26,23 @@
 
 
         function getTeams() {
-            vm.teams = GetTeamDetails.getTeamNames();
-            console.log(vm.teams);
+            return GetTeamDetails.getTeamNames().then(function (teamsList) {
+                vm.teams = teamsList.teams;
+                console.log(vm.teams);
+            });
         }
 
+
         vm.register = function () {
-            var userdetails = registerUser.setUser(vm.user);
-            console.log('userdetails :: ', userdetails);
+            //var userdetails = registerUser.manageUser(vm.user);
+            console.log('userdetails :: ', vm.user);
+            console.log('Name :: ', vm.user.name);
         };
 
 
         function init() {
-            getTeams();
+            vm.user = registerUser.newUser();
+            vm.teams = getTeams();
         }
 
     }

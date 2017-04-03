@@ -13,9 +13,25 @@
                 .catch(function (error) {
                     console.log('XHR Failed for getTeams.' + error.data);
                 });
-        };
 
+        };
 
     }
 
 }());
+
+
+// return [
+            //     {
+            //         name: "Wright Express Corporation",
+            //         id: "WEX"
+            //     },
+            //     {
+            //         name: "Wyndham Destination Network",
+            //         id: "WDN"
+            //     },
+            //     {
+            //         name: "Wyndham Vacation Ownership",
+            //         id: "WVO"
+            //     }
+            // ];

@@ -3,7 +3,7 @@
     angular.module('starterapp')
         .factory('fetchTeams', fetchTeams);
 
-    // fetchTeams.$inject = ['$http'];
+    fetchTeams.$inject = ['$http'];
 
     function fetchTeams($http) {
         return {
@@ -11,7 +11,7 @@
         };
 
         function getTeams() {
-            return $http.get('http://localhost:3000/teams')
+            return $http.get('http://localhost:3000/db')
                 .then(getTeamSuccess)
                 .catch(getTeamFailed);
 
