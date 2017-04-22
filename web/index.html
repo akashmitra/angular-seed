@@ -1,49 +1,69 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="starterapp">
-    <head>
-        <title>My first Angular App</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
-    </head>
-    <body ng-controller="StarterCtrl">
-        <h1>{{title}}</h1>
-        <!--<h1 ng-bind="title"></h1>
+
+<head>
+    <title>My first Angular App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body ng-controller="StarterCtrl">
+    <h1>{{title}}</h1>
+
+    <a href="#jedi">Jedi</a>
+    <a href="#rebel">Rebel</a>
+    <a href="#empire">Empire</a>
+
+    <!--<h1 ng-bind="title"></h1>
         <input type="text" ng-model="title"/>
         <button ng-click="sayHello()">Say Hello</button>-->
 
-        <!-- Two Way Bindings -->
-        <!--<input type="text" placeholder="Name" ng-model="user.name"/> {{user.name}}
+    <!-- Two Way Bindings -->
+    <!--<input type="text" placeholder="Name" ng-model="user.name"/> {{user.name}}
         <br>
         <input type="text" placeholder="School" ng-model="user.school"/> 
         <br><button ng-click="twoWayBindEg()">Click Me!</button>-->
 
 
-
-        <!-- Repeats and Service Calls -->
-        <!--<ul>
+    <!-- Repeats and Service Calls -->
+    <!--<ul>
             <li>Akash</li>
             <li>Ashish</li>
             <li>Amit</li>
         </ul>-->
 
-        <!--<ul>
+    <!--<ul>
             <li ng-repeat="people in peoples"> {{people}}</li>
         </ul>-->
 
 
-        <!-- Directives   -->
-        <!--<my-header></my-header>-->
-        <!--<some-action name="Akash"></some-action>-->
-        <!--<heavy-action name="{{myName}}"></heavy-action>-->
-        <my-form></my-form>
+    <!-- Directives   -->
+    <!--<my-header></my-header>-->
+    <!--<some-action name="Akash"></some-action>-->
+    <!--<heavy-action name="{{myName}}"></heavy-action>-->
+    <!--<my-form></my-form>-->
 
-        <!-- Javasript-->
-        <script src="../node_modules/angular/angular.min.js"></script>
-        <script src="js/starter/app.module.js"></script>
-        <script src="js/starter/starter.controller.js"></script>
-        <script src="js/starter/header.directive.js"></script>
-        <script src="js/starter/starter.factory.js"></script>
-        <script src="js/starter/starter.service.js"></script>
-    </body>
+    <div ng-view></div>
+
+    <!-- Javasript-->
+    <script src="../node_modules/angular/angular.min.js"></script>
+    <script src="../node_modules/angular-route/angular-route.js"></script>
+
+    <script src="js/app.module.js"></script>
+    <script src="js/app.config.js"></script>
+
+    <script src="js/starter/starter.controller.js"></script>
+    <script src="js/routerCtrl/jedi.controller.js"></script>
+    <script src="js/routerCtrl/rebel.controller.js"></script>
+    <script src="js/routerCtrl/empire.controller.js"></script>
+
+    <script src="js/starter/header.directive.js"></script>
+    <script src="js/starter/starter.factory.js"></script>
+    <script src="js/starter/starter.service.js"></script>
+
+
+
+</body>
+
 </html>

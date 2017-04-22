@@ -14,7 +14,7 @@
 
     function StarterCtrl($scope, GetPeople) {
         var vm = $scope;
-        vm.title = "Hello World Again!";
+        vm.title = "Hello";
         vm.myName = "Akash";
 
         vm.sayHello = function () {
